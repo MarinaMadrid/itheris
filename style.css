@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Taviraj:300,400,700,300i,400i,700i");
+
+*,/*todos los elementos*/
+*::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+*::after {
+  box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+  margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+  padding: 0;
+}
+
+body, input, textarea, button {
+    font-family: "Taviraj", serif;
+}
+
+nav p, nav i, button, span {
+    cursor: pointer;
+}
+
+header, button, .header span, .posts article p:first-child, .title-last-post{
+    color: white;
+}
+
+header span, .header p:nth-child(2), .posts article p, .subtitle-last-post, footer p {
+    color: lightgray;
+
+}
+
+.formulario, .first-post, .blog, footer{
+    background-color: rgb(237,237,237);
+}
+
+header{
+    background-image: url(images/banner.jpg);
+    background-position: center;
+    height: 40em;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+header span {
+    font-size: small;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 25em;
+}
+
+.header p:nth-child(1){
+    font-size: 5em;
+}
+
+.header p:nth-child(2){
+    width: 50%;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+.header span{
+    font-size: 1em;
+}
+
+.button-blue{
+    border: 1px solid #5AA6ED;
+    background-color: #5AA6ED;
+    border-radius: 5px;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.button-blue:hover{
+    background-color: rgba(90, 166, 237, 0.9);
+}
+
+/*MAIN*/
+/*FIRST-POST*/
+.first-post, .blog{
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.first-post article{
+    background-color: white;
+    padding: 3em;
+}
+
+.first-post img{
+    width: 100%;
+    height: 20em;
+}
+
+.first-post p, .first-post hr, .blog p, .blog hr{
+    color: rgb(166,179,204);
+    margin-bottom: 1em;
+}
+
+.title-first-post, .title-blog, .title-form{
+    color: black !important; 
+    margin-top: 2em;
+    font-size: x-large;
+    margin-bottom: 1em;
+}
+
+.resume{
+    text-align: left;
+}
+
+/*POSTS*/
+.posts, .last-post{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.7)), url(images/bg.jpg);
+    background-size: cover;
+    height: 20em;
+    padding: 3em;
+}
+
+.posts article{
+    padding: 2em;
+}
+
+.posts article p {
+    margin-bottom: 2em;
+}
+
+.posts article p:first-child {
+    margin-bottom: 1em;
+} 
+
+.vertical{
+    height: 15em;
+    width: 0;
+}
+
+.button-white{
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.button-white:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*BLOG*/
+.blog{
+    height: 50em;
+}
+
+.blog img{
+    width: 100%;
+    height: 15em;
+}
+
+.blog article{
+    background-color: white;
+    margin-right: 2em;
+    height: 40em;
+}
+
+.text-blog{
+    padding: 1em;
+}
+
+.subtitle-blog{
+    font-size: larger;
+}
+
+/*LAST POST*/
+.last-post{
+    flex-direction: column;
+    padding: 5em;
+}
+
+.title-last-post{
+    margin-bottom: 2em;
+}
+
+/*FORMULARIO*/
+.formulario{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 4em;
+    color: black;
+}
+
+.title-form{
+    text-align: center;
+}
+
+.formu{
+    background-color: white;
+    padding: 3em;
+}
+
+.formulario hr{
+    margin-bottom: 2em;
+}
+
+input, textarea{
+    border: 1px solid lightgray;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+}
+
+.data input{
+    width: 43.5em;
+    margin-right: 1em;
+}
+
+.formulario li{
+    list-style: none;
+}
+
+.formulario button{
+    margin-left: 45%;
+}
+
+/*FOOTER*/
+footer{
+    height: 3em;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+}
