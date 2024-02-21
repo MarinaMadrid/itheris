@@ -1,3 +1,7 @@
+@media only screen and (max-width: 1024) {
+}
+
+
 @media only screen and (max-width: 768px) {
     header {
       height: auto;
@@ -25,7 +29,7 @@
         }
   
         p:nth-child(2) {
-          min-width: 80%;
+          width: 80%;
           font-size: 1em;
           margin-bottom: 1em;
         }
