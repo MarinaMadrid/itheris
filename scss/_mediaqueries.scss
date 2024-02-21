@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1024) {
+}
+
+
+@media only screen and (max-width: 768px) {
+    header {
+      height: auto;
+  
+      nav {
+        @include flexbox(column, center, center);
+        padding: 1em;
+        text-align: center;
+  
+        p {
+          margin-bottom: 0.5em;
+        }
+  
+        i {
+          margin-top: 0.5em;
+        }
+      }
+  
+      .header__main {
+        height: auto;
+        @include flexbox(column, center, center);  
+  
+        p:nth-child(1) {
+          font-size: 2em;
+        }
+  
+        p:nth-child(2) {
+          width: 80%;
+          font-size: 1em;
+          margin-bottom: 1em;
+        }
+  
+        button {
+          margin-top: 1em;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+
+    .main__first__post img {
+        max-width: 100%;
+        height: auto;
+      }
+
+    .main__posts {
+        @include flexbox(column, center, center);
+        height: auto;
+        padding: 2em; 
+
+        article {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2em; 
+
+            p {
+            margin-bottom: 1em;
+            }
+
+            .button__white {
+            margin-top: 1em; 
+            }
+        }
+
+        .hr__vertical {
+            display: none; /* Oculta las líneas verticales en pantallas más pequeñas */
+        }
+    }
+
+    .main__blog {
+        @include flexbox(column, center, center);
+        height: auto;
+        padding: 2em; 
+    
+        article {
+          width: 100%;
+          margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+          margin-bottom: 2em; /* Espaciado entre artículos */
+    
+          img {
+            height: auto; /* Ajusta la altura de la imagen automáticamente */
+          }
+    
+          .main__blog__text {
+            padding: 1em;
+    
+            p {
+              margin-bottom: 1em;
+            }
+    
+            .main__blog__subtitle {
+              font-size: normal; /* Restaura el tamaño de la fuente a su valor normal */
+            }
+          }
+        }
+      }
+  }

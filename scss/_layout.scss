@@ -1,0 +1,265 @@
+*,/*todos los elementos*/
+*::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+*::after {
+  box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+  margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+  padding: 0;
+}
+
+body, 
+input, 
+textarea, 
+button {
+    font-family: "Taviraj", serif;
+}
+
+nav p, 
+nav i, 
+button, 
+span {
+    cursor: pointer;
+}
+
+header, 
+button, 
+.header__main span, 
+.main__posts article p:first-child, 
+.main__last__post__title{
+    color: map-get($colores, white-color);
+}
+
+header span, 
+.header__main p:nth-child(2), 
+.main__posts article p, 
+.main__last__post__subtitle, 
+footer p {
+    color: map-get($colores, lightgray-color);
+
+}
+
+.main__formulario, 
+.main__first__post, 
+.main__blog, 
+footer{
+    background-color: map-get($colores, white-background);
+}
+
+header{
+    background-image: $header-background;
+    background-position: center;
+    height: 40em;
+
+    nav{
+        @include flexbox(row, space-between, center);
+        padding: 1em;
+    }
+
+    span {
+        font-size: small;
+    }
+}
+
+.header__main{
+    @include flexbox(column, center, center);
+    height: 25em;
+
+    p:nth-child(1){
+        font-size: 5em;
+    }
+
+    p:nth-child(2){
+        width: 50%;
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    span{
+        font-size: 1em;
+    }
+}
+
+.button__blue{
+    border: 1px solid map-get($colores, blue-color);
+    background-color: map-get($colores, blue-color);
+    border-radius: 5px;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    &:hover{
+        background-color: map-get($colores, blue-color-second);
+    }
+}
+
+/*MAIN*/
+/*FIRST-POST*/
+.main__first__post, 
+.main__blog{
+    padding: 5em;
+    @include flexbox(center, center, center);
+    text-align: center;
+}
+
+.main__first__post {
+    article{
+        background-color: map-get($colores, white-color);
+        padding: 3em;
+    }
+
+    img{
+        width: 100%;
+        height: 20em;
+    }
+}
+
+.main__first__post p, 
+.main__first__post hr, 
+.main__blog p, 
+.main__blog hr{
+    color: map-get($colores, light-gray);
+    margin-bottom: 1em;
+}
+
+.main__first__post__title, 
+.main__blog__title, 
+.main__formulario__title{
+    color: map-get($colores, black-color) !important; 
+    margin-top: 2em;
+    font-size: x-large;
+    margin-bottom: 1em;
+}
+
+.main__first__post__resume{
+    text-align: left;
+}
+
+/*POSTS*/
+.main__posts, 
+.main__last__post{
+    @include flexbox(row, center, center);
+    background-image: linear-gradient(to bottom, map-get($colores, black-color-posts), map-get($colores, black-color-posts-second)), $posts-background;
+    background-size: cover;
+    height: 20em;
+    padding: 3em;
+}
+
+.main__posts article{
+    padding: 2em;
+
+    p {
+        margin-bottom: 2em;
+    }
+
+    p:first-child {
+        margin-bottom: 1em;
+    } 
+}
+
+.hr__vertical{
+    height: 15em;
+    width: 0;
+}
+
+.button__white{
+    background-color: transparent;
+    border: 1px solid map-get($colores, lightgray-color);
+    border-radius: 5px;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    &:hover{
+        background-color: map-get($colores, light-gray-second);
+    }
+}
+
+
+/*BLOG*/
+.main__blog{
+    height: 50em;
+
+    img{
+        width: 100%;
+        height: 15em;
+    }
+
+    article{
+        background-color: map-get($colores, white-color);
+        margin-right: 2em;
+        height: 40em;
+    }  
+}
+
+.main__blog__text{
+    padding: 1em;
+}
+
+.main__blog__subtitle{
+    font-size: larger;
+}
+
+/*LAST POST*/
+.main__last__post{
+    flex-direction: column;
+    padding: 5em;
+}
+
+.main__last__post__title{
+    margin-bottom: 2em;
+}
+
+/*FORMULARIO*/
+.main__formulario{
+    width: 100%;
+    @include flexbox(column, center, center);
+    padding: 4em;
+    color: map-get($colores, black-color);
+
+    hr{
+        margin-bottom: 2em;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    button{
+        margin-left: 45%;
+    }
+}
+
+.main__formulario__title{
+    text-align: center;
+}
+
+.main__formulario__content{
+    background-color: map-get($colores, white-color);
+    padding: 3em;
+}
+
+input, textarea{
+    border: 1px solid map-get($colores, lightgray-color);
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.main__formulario__data{
+    @include flexbox(row, center, center);
+
+    input{
+        width: 43.5em;
+        margin-right: 1em;
+    }
+}
+
+/*FOOTER*/
+footer{
+    height: 3em;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+    }
+}
