@@ -47,7 +47,7 @@ footer{
 header{
     background-image: $header-background;
     background-position: center;
-    height: 40em;
+    max-height: 40em;
 
     nav{
         @include flexbox(row, space-between, center);
@@ -61,7 +61,7 @@ header{
 
 .header__main{
     @include flexbox(column, center, center);
-    height: 25em;
+    min-height: 25em;
 
     p:nth-child(1){
         font-size: 5em;
@@ -95,9 +95,9 @@ header{
 /*FIRST-POST*/
 .main__first__post, 
 .main__blog{
-    padding: 5em;
     @include flexbox(center, center, center);
     text-align: center;
+    padding: 5em;
 }
 
 .main__first__post {
@@ -108,7 +108,7 @@ header{
 
     img{
         width: 100%;
-        height: 20em;
+        max-height: 20em;
     }
 }
 
@@ -139,7 +139,7 @@ header{
     @include flexbox(row, center, center);
     background-image: linear-gradient(to bottom, map-get($colores, black-color-posts), map-get($colores, black-color-posts-second)), $posts-background;
     background-size: cover;
-    height: 20em;
+    min-height: 20em;
     padding: 3em;
 }
 
@@ -156,7 +156,7 @@ header{
 }
 
 .hr__vertical{
-    height: 15em;
+    min-height: 15em;
     width: 0;
 }
 
@@ -176,17 +176,17 @@ header{
 
 /*BLOG*/
 .main__blog{
-    height: 50em;
+    min-height: 50em;
 
     img{
         width: 100%;
-        height: 15em;
+        max-height: 15em;
     }
 
     article{
         background-color: map-get($colores, white-color);
         margin-right: 2em;
-        height: 40em;
+        min-height: 40em;
     }  
 }
 
@@ -249,14 +249,14 @@ input, textarea{
     @include flexbox(row, center, center);
 
     input{
-        width: 43.5em;
+        min-width: 43.5em;
         margin-right: 1em;
     }
 }
 
 /*FOOTER*/
 footer{
-    height: 3em;
+    min-height: 3em;
     text-align: center;
 
     a{
