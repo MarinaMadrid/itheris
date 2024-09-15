@@ -103,6 +103,7 @@ header{
     article{
         background-color: map-get($colores, white-color);
         padding: 3em;
+        min-width: 30em;
     }
 
     img{

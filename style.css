@@ -106,6 +106,7 @@ header span {
 .main__first__post article {
   background-color: white;
   padding: 3em;
+  min-width: 30em;
 }
 .main__first__post img {
   width: 100%;
