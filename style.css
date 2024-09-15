@@ -33,8 +33,7 @@ button,
 header span,
 .header__main p:nth-child(2),
 .main__posts article p,
-.main__last__post__subtitle,
-footer p {
+.main__last__post__subtitle {
   color: lightgray;
 }
 
@@ -261,9 +260,11 @@ input, textarea {
 footer {
   min-height: 3em;
   text-align: center;
+  color: rgba(0, 0, 0, 0.7);
 }
 footer a {
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 @media only screen and (max-width: 768px) {

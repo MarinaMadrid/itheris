@@ -31,8 +31,7 @@ button,
 header span, 
 .header__main p:nth-child(2), 
 .main__posts article p, 
-.main__last__post__subtitle, 
-footer p {
+.main__last__post__subtitle {
     color: map-get($colores, lightgray-color);
 
 }
@@ -261,8 +260,10 @@ input, textarea{
 footer{
     min-height: 3em;
     text-align: center;
+    color: map-get($colores, black-color-posts-second);
 
     a{
         text-decoration: none;
+        color: map-get($colores, black-color-posts-second);
     }
 }
