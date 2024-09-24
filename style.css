@@ -225,8 +225,11 @@ header span {
 .main__formulario li {
   list-style: none;
 }
-.main__formulario button {
-  margin-left: 45%;
+.main__formulario form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__formulario__title {

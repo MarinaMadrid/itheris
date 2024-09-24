@@ -226,8 +226,8 @@ header{
         list-style: none;
     }
 
-    button{
-        margin-left: 45%;
+    form {
+        @include flexbox(column, center, center);  
     }
 }
 
