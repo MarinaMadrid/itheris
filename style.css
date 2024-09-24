@@ -274,6 +274,20 @@ footer a {
   color: rgba(0, 0, 0, 0.7);
 }
 
+@media only screen and (max-width: 1231px) {
+  .main__formulario__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Cambia a column y centra los elementos */
+  }
+  .main__formulario__data input {
+    min-width: 30em;
+    width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+    margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+  }
+}
 @media only screen and (max-width: 768px) {
   header {
     height: auto;
@@ -361,17 +375,5 @@ footer a {
   }
   .main__blog article .main__blog__text .main__blog__subtitle {
     font-size: normal; /* Restaura el tamaño de la fuente a su valor normal */
-  }
-  .main__formulario__data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* Cambia a column y centra los elementos */
-  }
-  .main__formulario__data input {
-    min-width: 30em;
-    width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
-    margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
   }
 }/*# sourceMappingURL=style.css.map */
