@@ -397,9 +397,4 @@ footer a {
   .main__blog article .main__blog__text .main__blog__subtitle {
     font-size: normal; /* Restaura el tamaño de la fuente a su valor normal */
   }
-}
-@media only screen and (max-width: 768px) {
-  .main__blog article img {
-    min-width: 300px;
-  }
 }/*# sourceMappingURL=style.css.map */

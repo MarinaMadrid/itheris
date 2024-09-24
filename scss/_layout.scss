@@ -179,7 +179,9 @@ header{
 
 /*BLOG*/
 .main__blog{
-    min-height: 50em;
+    @include flexbox(row, center, stretch);
+    flex-wrap: wrap;
+    gap: 2em;
 
     img{
         width: 100%;
@@ -188,13 +190,31 @@ header{
 
     article{
         background-color: map-get($colores, white-color);
-        margin-right: 2em;
-        min-height: 40em;
+        background-color: white;
+        flex: 1 1 calc(50% - 2em); /* Los artículos ocuparán el 50% del ancho del contenedor, menos el espacio del gap */
+        max-width: 45%; /* Controla el ancho máximo de los artículos */
+        min-width: 500px; /* Establece un ancho mínimo para que no se encojan demasiado en pantallas pequeñas */
+        display: flex;
+        flex-direction: column; /* Permite que el contenido interno del artículo crezca verticalmente */
+
+        figure {
+            flex-shrink: 0; /* Evita que la imagen se encoja */ 
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
     }  
 }
 
 .main__blog__text{
+    flex-grow: 1; /* Permite que el texto crezca para ocupar todo el espacio disponible */
     padding: 1em;
+}
+
+.main__blog__title, .main__blog__subtitle, .main__blog__text p {
+    margin-bottom: 1em;
 }
 
 .main__blog__subtitle{
